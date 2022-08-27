@@ -6,8 +6,8 @@ module Unaccent
     # Replace a string's accented characters with unaccented characters.
     #
     # @example
-    #   s = 'Å Ç ß'
-    #   Unaccent.unaccent(s) = > 'AA C ss'
+    #   str = 'Å Ç ß'
+    #   Unaccent.unaccent(str) = > 'AA C ss'
     #
     # @return [String] a string that has no accents
 
