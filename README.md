@@ -4,7 +4,7 @@ Ruby gem to replace a string's accent characters with ASCII characters. Based on
 
 [![Gem Version](https://badge.fury.io/rb/unaccent.svg)](https://badge.fury.io/rb/unaccent)
 [![Build](https://github.com/hardpixel/unaccent/actions/workflows/build.yml/badge.svg)](https://github.com/hardpixel/unaccent/actions/workflows/build.yml)
-[![Maintainability](https://api.codeclimate.com/v1/badges/7e307214d3c2e4d2056d/maintainability)](https://codeclimate.com/github/hardpixel/unaccent/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/9070ea120ceeddbcc1d2/maintainability)](https://codeclimate.com/github/hardpixel/unaccent/maintainability)
 
 ## Installation
 
