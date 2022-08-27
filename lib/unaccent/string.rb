@@ -20,4 +20,6 @@ module Unaccent
   end
 end
 
-String.include Unaccent::String
+class String
+  include Unaccent::String
+end
