@@ -24,6 +24,12 @@ class UnaccentTest < Minitest::Test
       it 'with greek' do
         assert_equal Unaccent.send(:"via_#{mid}", 'νέα'), 'νεα'
       end
+
+      it 'converts every character' do
+        Unaccent::ACCENTMAP.each do |from, to|
+          assert_equal Unaccent.send(:"via_#{mid}", from), to
+        end
+      end
     end
   end
 end
