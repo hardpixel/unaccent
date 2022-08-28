@@ -1,35 +1,33 @@
 require 'test_helper'
 
 class UnaccentTest < Minitest::Test
-  METHODS = %w[gsub scan each_char split_map].freeze
+  def test_that_it_has_a_version_number
+    refute_nil Unaccent::VERSION
+  end
 
-  METHODS.each do |mid|
-    describe "via #{mid}" do
-      it 'with plain' do
-        assert_equal Unaccent.send(:"via_#{mid}", 'abc'), 'abc'
-      end
+  def test_that_it_converts_unaccented
+    assert_equal Unaccent.unaccent('abc'), 'abc'
+  end
 
-      it 'with angstrom' do
-        assert_equal Unaccent.send(:"via_#{mid}", 'Å'), 'A'
-      end
+  def test_that_it_converts_angstrom
+    assert_equal Unaccent.unaccent('Å'), 'A'
+  end
 
-      it 'with double letter' do
-        assert_equal Unaccent.send(:"via_#{mid}", 'Æ'), 'AE'
-      end
+  def test_that_it_converts_double_leter
+    assert_equal Unaccent.unaccent('Æ'), 'AE'
+  end
 
-      it 'with french' do
-        assert_equal Unaccent.send(:"via_#{mid}", 'déjà vu'), 'deja vu'
-      end
+  def test_that_it_converts_french
+    assert_equal Unaccent.unaccent('déjà vu'), 'deja vu'
+  end
 
-      it 'with greek' do
-        assert_equal Unaccent.send(:"via_#{mid}", 'νέα'), 'νεα'
-      end
+  def test_that_it_converts_greek
+    assert_equal Unaccent.unaccent('νέα'), 'νεα'
+  end
 
-      it 'converts every character' do
-        Unaccent::ACCENTMAP.each do |from, to|
-          assert_equal Unaccent.send(:"via_#{mid}", from), to
-        end
-      end
+  def test_that_it_converts_every_character
+    Unaccent::ACCENTMAP.each do |from, to|
+      assert_equal to, Unaccent.unaccent(from)
     end
   end
 end

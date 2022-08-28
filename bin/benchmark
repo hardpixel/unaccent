@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 
 require 'bundler/inline'
-require 'tempfile'
 
 gemfile true, quiet: true do
   source 'https://rubygems.org'
@@ -26,46 +25,15 @@ STRINGS = [
 ]
 
 reports = lambda do |x|
-  x.report('gsub') do
+  x.report('unaccent') do
     STRINGS.each do |str|
-      Unaccent.via_gsub(str)
+      Unaccent.unaccent(str)
     end
   end
 
-  x.report('scan') do
+  x.report('sixarm') do
     STRINGS.each do |str|
-      Unaccent.via_scan(str)
-    end
-  end
-
-  x.report('each_char') do
-    STRINGS.each do |str|
-      Unaccent.via_each_char(str)
-    end
-  end
-
-  x.report('split_map') do
-    STRINGS.each do |str|
-      Unaccent.via_split_map(str)
-    end
-  end
-
-
-  x.report('scan (sixarm)') do
-    STRINGS.each do |str|
-      str.unaccent_via_scan
-    end
-  end
-
-  x.report('each_char (sixarm)') do
-    STRINGS.each do |str|
-      str.unaccent_via_each_char
-    end
-  end
-
-  x.report('split_map (sixarm)') do
-    STRINGS.each do |str|
-      str.unaccent_via_split_map
+      str.unaccent
     end
   end
 end
