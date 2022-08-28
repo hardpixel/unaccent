@@ -1,6 +1,6 @@
 # Unaccent
 
-Ruby gem to replace a string's accent characters with ASCII characters. Based on [SixArm Ruby Unaccent](https://github.com/SixArm/sixarm_ruby_unaccent).
+Ruby gem to replace a string's accent characters with unaccented characters. Based on [SixArm Ruby Unaccent](https://github.com/SixArm/sixarm_ruby_unaccent).
 
 [![Gem Version](https://badge.fury.io/rb/unaccent.svg)](https://badge.fury.io/rb/unaccent)
 [![Build](https://github.com/hardpixel/unaccent/actions/workflows/build.yml/badge.svg)](https://github.com/hardpixel/unaccent/actions/workflows/build.yml)
