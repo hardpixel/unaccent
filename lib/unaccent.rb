@@ -1,9 +1,10 @@
 # frozen_string_literal: true
 
-require 'unaccent/accentmap'
 require 'unaccent/version'
 
 module Unaccent
+  autoload :ACCENTMAP, 'unaccent/accentmap'
+
   class << self
     # Replace a string's accented characters with unaccented characters.
     #
