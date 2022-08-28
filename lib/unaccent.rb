@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'unaccent/accentmap'
 require 'unaccent/version'
 

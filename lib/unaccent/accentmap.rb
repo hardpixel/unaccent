@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Unaccent
   ACCENTMAP = {
     # 00A0 NO-BREAK SPACE
