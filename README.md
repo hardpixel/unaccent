@@ -39,24 +39,28 @@ require 'unaccent/string'
 ## Benchmark
 
 ```
-IPS Comparison:
-                gsub:    33804.1 i/s
-           each_char:    16639.9 i/s - 2.03x  (± 0.00) slower
-  each_char (sixarm):    13708.2 i/s - 2.47x  (± 0.00) slower
-                scan:    10390.0 i/s - 3.25x  (± 0.00) slower
-       scan (sixarm):     8765.8 i/s - 3.86x  (± 0.00) slower
-           split_map:     7800.9 i/s - 4.33x  (± 0.00) slower
-  split_map (sixarm):     6780.7 i/s - 4.99x  (± 0.00) slower
+Warming up --------------------------------------
+            unaccent     3.259k i/100ms
+              sixarm   838.000  i/100ms
+Calculating -------------------------------------
+            unaccent     32.573k (± 2.1%) i/s -    162.950k in   5.004780s
+              sixarm      8.025k (± 4.6%) i/s -     40.224k in   5.023339s
 
+Comparison:
+            unaccent:    32573.1 i/s
+              sixarm:     8024.7 i/s - 4.06x  (± 0.00) slower
 
-Memory Comparison:
-                gsub:       5947 allocated
-           each_char:      10704 allocated - 1.80x more
-                scan:      15368 allocated - 2.58x more
-           split_map:      20582 allocated - 3.46x more
-  split_map (sixarm):      23185 allocated - 3.90x more
-  each_char (sixarm):      24979 allocated - 4.20x more
-       scan (sixarm):      29979 allocated - 5.04x more
+Calculating -------------------------------------
+            unaccent     5.947k memsize (     0.000  retained)
+                        76.000  objects (     0.000  retained)
+                        42.000  strings (     0.000  retained)
+              sixarm    29.979k memsize (     0.000  retained)
+                       633.000  objects (     0.000  retained)
+                        50.000  strings (     0.000  retained)
+
+Comparison:
+            unaccent:       5947 allocated
+              sixarm:      29979 allocated - 5.04x more
 ```
 
 ## Development
