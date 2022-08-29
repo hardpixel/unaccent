@@ -5040,7 +5040,7 @@ module Unaccent
     # 2103 DEGREE CELSIUS
     # ->   00B0 DEGREE SIGN
     #    + 0043 LATIN CAPITAL LETTER C
-    "\u{2103}" => "\u{B0C}",
+    "\u{2103}" => "\u{B0}C",
 
     # 2105 CARE OF
     # ->   0063 LATIN SMALL LETTER C
@@ -5061,7 +5061,7 @@ module Unaccent
     # 2109 DEGREE FAHRENHEIT
     # ->   00B0 DEGREE SIGN
     #    + 0046 LATIN CAPITAL LETTER F
-    "\u{2109}" => "\u{B0F}",
+    "\u{2109}" => "\u{B0}F",
 
     # 210A SCRIPT SMALL G
     # ->   0067 LATIN SMALL LETTER G
