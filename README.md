@@ -40,27 +40,27 @@ require 'unaccent/string'
 
 ```
 Warming up --------------------------------------
-            unaccent     3.259k i/100ms
-              sixarm   838.000  i/100ms
+            unaccent     4.328k i/100ms
+              sixarm   850.000  i/100ms
 Calculating -------------------------------------
-            unaccent     32.573k (± 2.1%) i/s -    162.950k in   5.004780s
-              sixarm      8.025k (± 4.6%) i/s -     40.224k in   5.023339s
+            unaccent     43.168k (± 2.2%) i/s -    216.400k in   5.015496s
+              sixarm      8.404k (± 1.6%) i/s -     42.500k in   5.058203s
 
 Comparison:
-            unaccent:    32573.1 i/s
-              sixarm:     8024.7 i/s - 4.06x  (± 0.00) slower
+            unaccent:    43168.4 i/s
+              sixarm:     8404.3 i/s - 5.14x  (± 0.00) slower
 
 Calculating -------------------------------------
-            unaccent     5.947k memsize (     0.000  retained)
-                        76.000  objects (     0.000  retained)
-                        42.000  strings (     0.000  retained)
+            unaccent   673.000  memsize (     0.000  retained)
+                        10.000  objects (     0.000  retained)
+                        10.000  strings (     0.000  retained)
               sixarm    29.979k memsize (     0.000  retained)
                        633.000  objects (     0.000  retained)
                         50.000  strings (     0.000  retained)
 
 Comparison:
-            unaccent:       5947 allocated
-              sixarm:      29979 allocated - 5.04x more
+            unaccent:        673 allocated
+              sixarm:      29979 allocated - 44.55x more
 ```
 
 ## Development
