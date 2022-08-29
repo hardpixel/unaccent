@@ -21,3 +21,5 @@ module Unaccent
     end
   end
 end
+
+require 'unaccent/unaccent'

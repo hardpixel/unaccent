@@ -13,12 +13,13 @@ Gem::Specification.new do |spec|
   spec.homepage      = 'https://github.com/hardpixel/unaccent'
   spec.license       = 'MIT'
 
-  spec.files         = Dir['LICENSE.txt', 'README.md', '.yardopts', 'lib/**/*']
+  spec.files         = Dir['LICENSE.txt', 'README.md', '.yardopts', '{lib,ext}/**/*']
+  spec.extensions    = ['ext/unaccent/extconf.rb']
   spec.require_paths = ['lib']
 
   spec.required_ruby_version = '>= 2.6'
 
   spec.add_development_dependency 'bundler', '~> 2.0'
   spec.add_development_dependency 'minitest', '~> 5.0'
-  spec.add_development_dependency 'rake', '~> 13.0'
+  spec.add_development_dependency 'rake-compiler', '~> 1.2'
 end
