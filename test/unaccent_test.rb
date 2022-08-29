@@ -6,23 +6,23 @@ class UnaccentTest < Minitest::Test
   end
 
   def test_that_it_converts_unaccented
-    assert_equal Unaccent.unaccent('abc'), 'abc'
+    assert_equal 'abc', Unaccent.unaccent('abc')
   end
 
   def test_that_it_converts_angstrom
-    assert_equal Unaccent.unaccent('Å'), 'A'
+    assert_equal 'A', Unaccent.unaccent('Å')
   end
 
   def test_that_it_converts_double_leter
-    assert_equal Unaccent.unaccent('Æ'), 'AE'
+    assert_equal 'AE', Unaccent.unaccent('Æ')
   end
 
   def test_that_it_converts_french
-    assert_equal Unaccent.unaccent('déjà vu'), 'deja vu'
+    assert_equal 'deja vu', Unaccent.unaccent('déjà vu')
   end
 
   def test_that_it_converts_greek
-    assert_equal Unaccent.unaccent('νέα'), 'νεα'
+    assert_equal 'μολων λαβε', Unaccent.unaccent('μολὼν λαβέ')
   end
 
   def test_that_it_converts_every_character
