@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'unaccent/version'
 
 module Unaccent
@@ -17,7 +15,23 @@ module Unaccent
     def unaccent(str)
       return str if str.ascii_only?
 
-      str.gsub(/[^[:ascii:]]/) { |char| ACCENTMAP.fetch(char, char) }
+      result = String.new('')
+
+      str.each_codepoint do |code|
+        if code < 160
+          result << code
+        else
+          rc = ACCENTMAP.fetch(code, code)
+
+          if rc.is_a? Array
+            rc.each { |cp| result << cp }
+          else
+            result << rc
+          end
+        end
+      end
+
+      result
     end
   end
 end
