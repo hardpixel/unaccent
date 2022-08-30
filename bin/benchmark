@@ -12,7 +12,7 @@ gemfile true, quiet: true do
   gem 'sixarm_ruby_unaccent'
 end
 
-STRINGS = [
+strings = [
   'String without accents in english',
   'Streng med aksenter på norsk',
   'Řetězec s akcenty v češtině',
@@ -27,15 +27,13 @@ STRINGS = [
 
 reports = lambda do |x|
   x.report('unaccent') do
-    STRINGS.each do |str|
+    strings.each do |str|
       Unaccent.unaccent(str)
     end
   end
 
   x.report('sixarm') do
-    STRINGS.each do |str|
-      str.unaccent
-    end
+    strings.each(&:unaccent)
   end
 end
 
