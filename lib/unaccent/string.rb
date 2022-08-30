@@ -3,6 +3,7 @@
 require 'unaccent'
 
 module Unaccent
+  # Extend the String class with unaccent method.
   module String
     def unaccent
       Unaccent.unaccent(self)

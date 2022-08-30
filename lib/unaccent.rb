@@ -2,6 +2,7 @@
 
 require 'unaccent/version'
 
+# Replace accented characters with unaccented characters in a string.
 module Unaccent
   autoload :ACCENTMAP, 'unaccent/accentmap'
 
