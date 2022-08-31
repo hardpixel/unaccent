@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = 'https://github.com/hardpixel/unaccent'
   spec.license       = 'MIT'
 
-  spec.files         = Dir['LICENSE.txt', 'README.md', '.yardopts', 'lib/**/*']
+  spec.files         = Dir['lib/**/*', '*.{md,txt}', '.yardopts']
   spec.require_paths = ['lib']
 
   spec.required_ruby_version = '>= 2.6'
